@@ -1,13 +1,13 @@
 #include <stdint.h>
 #include <Adafruit_GFX.h>
 #include "FancyEPD.h"
-#include "FancyEPD_Demo_images.h"
+#include "FancyEPD_OHS17_images.h"
 
 #define DELAY_BETWEEN_IMAGES_MS       (6 * 1000)
 
 // Pins set for project: github.com/pdp7/kicad-teensy-epaper
 //FancyEPD epd(E2215CS062, 17, 16, 14, 15, 13, 11);	// software SPI
-FancyEPD epd(k_epd_model_E2215CS062, 17, 16, 14, 15);	// hardware SPI
+FancyEPD epaper(k_epd_model_E2215CS062, 17, 16, 14, 15);	// hardware SPI
 
 void setup() {
 	bool success = epd.init();
@@ -19,7 +19,27 @@ void setup() {
 }
 
 void loop() {
-	drawCircles();
+
+  epaper.setRotation(0);
+  epaper.setBorderColor(0x00); // black
+  epaper.updateScreenWithImage( ohs2010, k_image_4bit_monochrome );
+  delay(DELAY_BETWEEN_IMAGES_MS);
+
+  epaper.setRotation(2);
+  epaper.setBorderColor(0x00); // black
+  epd.updateScreenWithImage( ohs17, k_image_4bit_monochrome );
+  delay(DELAY_BETWEEN_IMAGES_MS);
+  
+
+  epaper.setRotation(0);
+  epaper.setBorderColor(0x00); // black
+  epaper.pdateScreenWithImage( drewfustini, k_image_4bit_monochrome );
+  delay(DELAY_BETWEEN_IMAGES_MS);
+  
+
+
+  
+	/*drawCircles();
 	drawLabel("Update:\n builtin_refresh");
 	epd.setBorderColor(0x00);	// white
 	epd.updateScreen(k_update_builtin_refresh);
@@ -54,6 +74,7 @@ void loop() {
 	epd.setBorderColor(0x40);	// grey-ish
 	epd.updateScreenWithImage(doggy_2bit, k_image_2bit_monochrome, k_update_quick_refresh);
 	delay(DELAY_BETWEEN_IMAGES_MS);
+ */
 }
 
 void drawCircles()
