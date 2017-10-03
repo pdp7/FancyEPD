@@ -7,7 +7,7 @@
 
 // Pins set for project: github.com/pdp7/kicad-teensy-epaper
 //FancyEPD epd(E2215CS062, 17, 16, 14, 15, 13, 11);	// software SPI
-FancyEPD epaper(k_epd_model_E2215CS062, 17, 16, 14, 15);	// hardware SPI
+FancyEPD epd(k_epd_model_E2215CS062, 17, 16, 14, 15);	// hardware SPI
 
 void setup() {
 	bool success = epd.init();
@@ -19,25 +19,21 @@ void setup() {
 }
 
 void loop() {
-
-  epaper.setRotation(0);
-  epaper.setBorderColor(0x00); // black
-  epaper.updateScreenWithImage( ohs2010, k_image_4bit_monochrome );
+  
+  epd.setRotation(0);
+  epd.setBorderColor(0x00); // black
+  epd.updateScreenWithImage( drewfustini, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
-
-  epaper.setRotation(2);
-  epaper.setBorderColor(0x00); // black
+  
+  epd.setRotation(2);
+  epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( ohs17, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
   
-
-  epaper.setRotation(0);
-  epaper.setBorderColor(0x00); // black
-  epaper.pdateScreenWithImage( drewfustini, k_image_4bit_monochrome );
+  epd.setRotation(0);
+  epd.setBorderColor(0x00); // black
+  epd.updateScreenWithImage( ohs2010, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
-  
-
-
   
 	/*drawCircles();
 	drawLabel("Update:\n builtin_refresh");
