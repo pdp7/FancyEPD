@@ -30,23 +30,16 @@ void loop() {
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( drewlandscape, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
-
-  /*epd.setRotation(2);
-    epd.setBorderColor(0x00); // black
-    epd.updateScreenWithImage( angel_4bit, k_image_4bit_monochrome );
-    delay(DELAY_BETWEEN_IMAGES_MS);*/
-
-  epd.setRotation(2);
+  
+  epd.setRotation(0);
   epd.setBorderColor(0x00); // black
-  epd.updateScreenWithImage( ohs17, k_image_4bit_monochrome );
+  epd.updateScreenWithImage( denvermf, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
 
   epd.setRotation(0);
   epd.setBorderColor(0x00); // black
-  epd.updateScreenWithImage( ohs2010, k_image_4bit_monochrome );
+  epd.updateScreenWithImage( avc, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
-
-
 
   /*drawCircles();
     drawLabel("Update:\n builtin_refresh");
