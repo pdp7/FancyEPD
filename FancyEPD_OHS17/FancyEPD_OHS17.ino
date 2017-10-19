@@ -33,13 +33,23 @@ void loop() {
   
   epd.setRotation(0);
   epd.setBorderColor(0x00); // black
-  epd.updateScreenWithImage( denvermf, k_image_4bit_monochrome );
+  epd.updateScreenWithImage( orlando, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
 
   epd.setRotation(0);
   epd.setBorderColor(0x00); // black
-  epd.updateScreenWithImage( avc, k_image_4bit_monochrome );
+  epd.updateScreenWithImage( effect, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
+
+  epd.setRotation(0);
+  epd.setBorderColor(0x00); // black
+  epd.updateScreenWithImage( make, k_image_4bit_monochrome );
+  delay(DELAY_BETWEEN_IMAGES_MS);
+  
+  //epd.setRotation(2);
+  //epd.setBorderColor(0x00); // black
+  //epd.updateScreenWithImage( avc, k_image_4bit_monochrome );
+  //delay(DELAY_BETWEEN_IMAGES_MS);
 
   /*drawCircles();
     drawLabel("Update:\n builtin_refresh");
