@@ -25,27 +25,32 @@ void setup() {
 }
 
 void loop() {
-
+ 
   epd.setRotation(2);
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( drewlandscape, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
-  
-  epd.setRotation(0);
+
+  epd.setRotation(2);
   epd.setBorderColor(0x00); // black
-  epd.updateScreenWithImage( orlando, k_image_4bit_monochrome );
+  epd.updateScreenWithImage( hackaday_logo, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
 
-  epd.setRotation(0);
+  epd.setRotation(2);
   epd.setBorderColor(0x00); // black
-  epd.updateScreenWithImage( effect, k_image_4bit_monochrome );
+  epd.updateScreenWithImage( tindie_logo, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
 
-  epd.setRotation(0);
+  epd.setRotation(2);
   epd.setBorderColor(0x00); // black
-  epd.updateScreenWithImage( make, k_image_4bit_monochrome );
+  epd.updateScreenWithImage( benchoff, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
   
+  epd.setRotation(2);
+  epd.setBorderColor(0x00); // black
+  epd.updateScreenWithImage( tindie_logo_2, k_image_4bit_monochrome );
+  delay(DELAY_BETWEEN_IMAGES_MS);
+
   //epd.setRotation(2);
   //epd.setBorderColor(0x00); // black
   //epd.updateScreenWithImage( avc, k_image_4bit_monochrome );
