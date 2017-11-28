@@ -33,15 +33,52 @@ void loop() {
 
   epd.setRotation(2);
   epd.setBorderColor(0x00); // black
-  epd.updateScreenWithImage( hackaday_logo, k_image_4bit_monochrome );
+  epd.updateScreenWithImage( glass_3h, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
 
   epd.setRotation(2);
   epd.setBorderColor(0x00); // black
-  epd.updateScreenWithImage( tindie_logo, k_image_4bit_monochrome );
+  epd.updateScreenWithImage( bot, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
 
   epd.setRotation(2);
+  epd.setBorderColor(0x00); // black
+  epd.updateScreenWithImage( glass_3h, k_image_4bit_monochrome );
+  delay(DELAY_BETWEEN_IMAGES_MS);
+  
+  epd.setRotation(2);
+  epd.setBorderColor(0x00); // black
+  epd.updateScreenWithImage( pen, k_image_4bit_monochrome );
+  delay(DELAY_BETWEEN_IMAGES_MS);
+  
+  epd.setRotation(2);
+  epd.setBorderColor(0x00); // black
+  epd.updateScreenWithImage( glass_3h, k_image_4bit_monochrome );
+  delay(DELAY_BETWEEN_IMAGES_MS);
+  
+  epd.setRotation(2);
+  epd.setBorderColor(0x00); // black
+  epd.updateScreenWithImage( theamphour, k_image_4bit_monochrome );
+  delay(DELAY_BETWEEN_IMAGES_MS);
+  
+  epd.setRotation(2);
+  epd.setBorderColor(0x00); // black
+  epd.updateScreenWithImage( glass_3h, k_image_4bit_monochrome );
+  delay(DELAY_BETWEEN_IMAGES_MS);
+  
+  epd.setRotation(0);
+  epd.setBorderColor(0x00); // black
+  epd.updateScreenWithImage( peter, k_image_4bit_monochrome );
+  delay(DELAY_BETWEEN_IMAGES_MS);
+
+  epd.setRotation(2);
+  epd.setBorderColor(0x00); // black
+  epd.updateScreenWithImage( glass_3h, k_image_4bit_monochrome );
+  delay(DELAY_BETWEEN_IMAGES_MS);
+  
+  
+  
+  /*epd.setRotation(2);
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( benchoff, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
@@ -49,7 +86,7 @@ void loop() {
   epd.setRotation(2);
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( tindie_logo_2, k_image_4bit_monochrome );
-  delay(DELAY_BETWEEN_IMAGES_MS);
+  delay(DELAY_BETWEEN_IMAGES_MS);*/
 
   //epd.setRotation(2);
   //epd.setBorderColor(0x00); // black
