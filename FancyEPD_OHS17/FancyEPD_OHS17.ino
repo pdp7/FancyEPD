@@ -43,7 +43,7 @@ void loop() {
 
   epd.setRotation(2);
   epd.setBorderColor(0x00); // black
-  epd.updateScreenWithImage( glass_3h, k_image_4bit_monochrome );
+  epd.updateScreenWithImage( drewlandscape, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
   
   epd.setRotation(2);
@@ -56,17 +56,17 @@ void loop() {
   epd.updateScreenWithImage( glass_3h, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
   
-  epd.setRotation(2);
+  epd.setRotation(0);
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( theamphour, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
   
   epd.setRotation(2);
   epd.setBorderColor(0x00); // black
-  epd.updateScreenWithImage( glass_3h, k_image_4bit_monochrome );
+  epd.updateScreenWithImage( drewlandscape, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
   
-  epd.setRotation(0);
+  epd.setRotation(2);
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( peter, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
