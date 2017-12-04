@@ -17,19 +17,36 @@ void setup() {
     return;
   }
 
+  epd.updateScreen(k_update_builtin_refresh);
+  epd.setRotation(0);
+  epd.setBorderColor(0x00); // black
+  epd.updateScreenWithImage( white, k_image_1bit );
+  delay(DELAY_BETWEEN_IMAGES_MS);
+  
+  epd.updateScreen(k_update_builtin_refresh);
   epd.setRotation(0);
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( drewfustini, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
-
-}
-
-void loop() {
- 
+  
+  epd.updateScreen(k_update_builtin_refresh);
   epd.setRotation(2);
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( drewlandscape, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
+
+
+}
+
+void loop() {
+  epd.updateScreen(k_update_builtin_refresh);
+
+  epd.updateScreen(k_update_builtin_refresh);
+  epd.setRotation(2);
+  epd.setBorderColor(0x00); // black
+  epd.updateScreenWithImage( drewlandscape, k_image_4bit_monochrome );
+  delay(DELAY_BETWEEN_IMAGES_MS);
+  
 
   epd.setRotation(2);
   epd.setBorderColor(0x00); // black
@@ -45,27 +62,27 @@ void loop() {
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( drewlandscape, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
-  
+
   epd.setRotation(2);
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( pen, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
-  
+
   epd.setRotation(2);
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( glass_3h, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
-  
+
   epd.setRotation(0);
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( theamphour, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
-  
+
   epd.setRotation(2);
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( drewlandscape, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
-  
+
   epd.setRotation(2);
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( peter, k_image_4bit_monochrome );
@@ -75,18 +92,18 @@ void loop() {
   epd.setBorderColor(0x00); // black
   epd.updateScreenWithImage( glass_3h, k_image_4bit_monochrome );
   delay(DELAY_BETWEEN_IMAGES_MS);
-  
-  
-  
+
+
+
   /*epd.setRotation(2);
-  epd.setBorderColor(0x00); // black
-  epd.updateScreenWithImage( benchoff, k_image_4bit_monochrome );
-  delay(DELAY_BETWEEN_IMAGES_MS);
-  
-  epd.setRotation(2);
-  epd.setBorderColor(0x00); // black
-  epd.updateScreenWithImage( tindie_logo_2, k_image_4bit_monochrome );
-  delay(DELAY_BETWEEN_IMAGES_MS);*/
+    epd.setBorderColor(0x00); // black
+    epd.updateScreenWithImage( benchoff, k_image_4bit_monochrome );
+    delay(DELAY_BETWEEN_IMAGES_MS);
+
+    epd.setRotation(2);
+    epd.setBorderColor(0x00); // black
+    epd.updateScreenWithImage( tindie_logo_2, k_image_4bit_monochrome );
+    delay(DELAY_BETWEEN_IMAGES_MS);*/
 
   //epd.setRotation(2);
   //epd.setBorderColor(0x00); // black
